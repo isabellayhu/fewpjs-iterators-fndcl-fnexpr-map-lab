@@ -13,5 +13,13 @@ const tutorials = [
 
 const titleCased = () => {
   // use the .map method on the tutorials to return a new array
-  return tutorials
+  function titleCaseString (string){
+    string = string.split(' ');
+    for (var i=0; i<string.length; i++){
+      string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1);
+    }
+    return string.join(' ');
+  }
+  return tutorials.map(titleCaseString);
+  // return tutorials
 }
